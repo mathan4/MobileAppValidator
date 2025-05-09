@@ -23,11 +23,8 @@ public class Main {
                 System.out.println("App '" + app.appName + "' by " + app.developerName
                         + " is approved for publishing.");
 
-            } catch (AppSizeTooLargeException |
-                     InvalidCategoryException |
-                     PricingException |
-                     DeveloperBannedException e) {
-                System.out.println("Validation failed for '" + app.appName + "': " + e.getMessage());
+            } catch (Exception exception) {
+                System.out.println("Validation failed for '" + app.appName + "': " + exception.getMessage());
             }finally {
                 System.out.println("Validation completed for '" + app.appName + "'.\n");
             }
